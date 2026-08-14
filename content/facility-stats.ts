@@ -9,10 +9,13 @@ export type FacilityStats = {
 };
 
 export const facilityStats: FacilityStats = {
+  // The floor area is two kanals on the plaza's second floor.
+  // The equipment-station count was replaced because no verified station
+  // figure exists. 18 hours is derived from the confirmed 06:00–00:00 schedule.
   stats: [
-    { value: "", label: "Floor area" },
-    { value: "", label: "Equipment stations" },
-    { value: "", label: "Coaching staff" },
+    { value: "10,890", label: "Square Feet" },
+    { value: "6", label: "Coaching Staff" },
+    { value: "18", label: "Hours Daily" },
   ],
-  verified: false,
+  verified: true,
 };

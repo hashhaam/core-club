@@ -39,6 +39,13 @@
   --cc-dur: 240ms; /* interface transitions */
   --cc-dur-slow: 600ms; /* scroll reveals */
 
+  /* Radii — mirrored from @theme so var() references resolve at runtime.
+     Do not remove either declaration: @theme generates the rounded-cc-*
+     utilities, :root makes var(--radius-cc-*) work in raw CSS. */
+  --radius-cc-sm: 12px;
+  --radius-cc-md: 20px;
+  --radius-cc-lg: 24px;
+
   /* Metallic gradient — logo-adjacent treatments only.
      The lift at 66–78% is a horizon reflection and is what makes this read
      as metal rather than grey plastic. Do not simplify or reduce the stops. */
