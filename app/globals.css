@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colour — LOCKED. Do not add, rename, or approximate any value. */
+  --color-core-black: #0b0b0d;
+  --color-core-white: #f4f6f8;
+  --color-titanium: #b9bec6;
+  --color-graphite: #2a2d33;
+  --color-gold: #c8a24a;
+  --color-gold-lift: #e8ce8c;
+
+  --color-surface-1: #131418;
+  --color-surface-2: #1a1c21;
+  --color-page-deep: #08080a;
+
+  --color-muted: #8b9099;
+  --color-hairline: rgba(185, 190, 198, 0.13);
+  --color-hairline-strong: rgba(185, 190, 198, 0.26);
+
+  --color-success: #4fb98a;
+  --color-error: #e2645a;
+  --color-warning: #e0a73c;
+
+  /* Radii */
+  --radius-cc-sm: 12px; /* buttons, inputs, tags */
+  --radius-cc-md: 20px; /* cards, panels, media */
+  --radius-cc-lg: 24px; /* modals, sheets, nav bar */
+
+  /* Fonts */
+  --font-display: var(--font-archivo);
+  --font-body: var(--font-inter);
+
+  /* Easing */
+  --ease-cc: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  --cc-dur-fast: 180ms; /* hover, focus */
+  --cc-dur: 240ms; /* interface transitions */
+  --cc-dur-slow: 600ms; /* scroll reveals */
+
+  /* Metallic gradient — logo-adjacent treatments only.
+     The lift at 66–78% is a horizon reflection and is what makes this read
+     as metal rather than grey plastic. Do not simplify or reduce the stops. */
+  --cc-metal: linear-gradient(
+    168deg,
+    #ffffff 0%,
+    #d8dde3 14%,
+    #9ba1a9 34%,
+    #5c6169 50%,
+    #c3c9d0 66%,
+    #eef1f4 78%,
+    #7e848c 100%
+  );
+
+  /* Layering contract — later phases depend on this. */
+  --z-content: 10;
+  --z-grain: 30;
+  --z-nav: 40;
+  --z-overlay: 50;
+}
+
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  color: var(--color-core-white);
+  /* Ambient descent: a single static fixed gradient. This is intentionally
+     NOT a scroll-driven animation. Do not add scroll listeners for this. */
+  background-color: var(--color-core-black);
+  background-image: linear-gradient(180deg, #0b0b0d 0%, #08080a 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus state — mandatory on every interactive element.
+   Never use `outline: none` without an equivalent visible replacement. */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-core-black);
+}
+
+/* Casing rules for later phases: hero UPPERCASE, section headings Title Case,
+   eyebrow labels UPPERCASE, buttons and nav UPPERCASE, body sentence case,
+   slogan UPPERCASE. Long all-caps paragraphs are banned; uppercase is for
+   short structural elements only. */
+.t-hero {
+  font-family: var(--font-display), sans-serif;
+  font-variation-settings: "wght" 700, "wdth" 115;
+  font-size: clamp(46px, 8vw, 118px);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.t-h2 {
+  font-family: var(--font-display), sans-serif;
+  font-variation-settings: "wght" 700, "wdth" 112;
+  font-size: clamp(30px, 4.5vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.t-h3 {
+  font-family: var(--font-display), sans-serif;
+  font-variation-settings: "wght" 600, "wdth" 108;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.t-eyebrow {
+  font-family: var(--font-display), sans-serif;
+  font-variation-settings: "wght" 600, "wdth" 100;
+  font-size: clamp(11px, 1vw, 12px);
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.t-button {
+  font-family: var(--font-display), sans-serif;
+  font-variation-settings: "wght" 600, "wdth" 100;
+  font-size: clamp(13px, 1vw, 14px);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.t-slogan {
+  font-family: var(--font-display), sans-serif;
+  font-variation-settings: "wght" 600, "wdth" 115;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.t-body {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.65;
+}
+
+.t-small {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.t-caption {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+/* Prices, stats, timetables — tabular figures are required. */
+.t-stat {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.t-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.container-cc {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.section-cc {
+  padding-block: 56px;
+}
+
+@media (min-width: 1024px) {
+  .section-cc {
+    padding-block: 96px;
+  }
+}
+
+/* Later phases must additionally read this media query in JavaScript via
+   matchMedia; CSS alone is not sufficient for motion-sensitive logic. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
