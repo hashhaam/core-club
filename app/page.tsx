@@ -1,5 +1,7 @@
 // Temporary Phase 0 token specimen. This page will be entirely replaced in Phase 2.
 
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { coaches } from "@/content/coaches";
 import { amenities } from "@/content/amenities";
 import { facilityStats } from "@/content/facility-stats";
@@ -134,7 +136,9 @@ export default function Home() {
           {colours.map((colour) => (
             <div key={colour.name}>
               <div
-                className={`size-20 border border-hairline ${colour.className}`}
+                className={["size-20 border border-hairline", colour.className].join(
+                  " ",
+                )}
               />
               <p className="t-caption mt-2">{colour.name}</p>
               <p className="t-caption text-muted">{colour.value}</p>
@@ -149,7 +153,10 @@ export default function Home() {
           {(["sm", "md", "lg"] as const).map((radius) => (
             <div key={radius}>
               <div
-                className={`size-24 border border-hairline-strong bg-surface-1 ${radiusClassNames[radius]}`}
+                className={[
+                  "size-24 border border-hairline-strong bg-surface-1",
+                  radiusClassNames[radius],
+                ].join(" ")}
                 style={{ borderRadius: `var(--radius-cc-${radius})` }}
               />
               <p className="t-caption mt-2">--radius-cc-{radius}</p>
@@ -167,6 +174,60 @@ export default function Home() {
         >
           Focus specimen
         </button>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="t-h3">Buttons</h2>
+        <div className="mt-6 space-y-8">
+          <div>
+            <p className="t-caption text-muted">Default variants</p>
+            <div className="mt-3 flex flex-wrap gap-4">
+              <Button>PRIMARY</Button>
+              <Button variant="secondary">SECONDARY</Button>
+              <Button variant="ghost">GHOST</Button>
+            </div>
+          </div>
+          <div>
+            <p className="t-caption text-muted">Disabled variants</p>
+            <div className="mt-3 flex flex-wrap gap-4">
+              <Button disabled>PRIMARY</Button>
+              <Button variant="secondary" disabled>
+                SECONDARY
+              </Button>
+              <Button variant="ghost" disabled>
+                GHOST
+              </Button>
+            </div>
+          </div>
+          <div>
+            <p className="t-caption text-muted">Primary link</p>
+            <Button href="/" className="mt-3">
+              HOME LINK
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="t-h3">Cards</h2>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <div>
+            <p className="t-caption text-muted">Non-interactive card</p>
+            <Card className="mt-3 p-6">
+              <p className="t-body text-titanium">
+                A calm surface for supporting gym content.
+              </p>
+            </Card>
+          </div>
+          <div>
+            <p className="t-caption text-muted">Interactive card</p>
+            <Card interactive className="mt-3 p-6">
+              <p className="t-body text-titanium">
+                This surface lifts to signal interaction.
+              </p>
+            </Card>
+          </div>
+        </div>
       </section>
 
       <section className="mt-16">
