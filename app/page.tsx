@@ -1,6 +1,7 @@
 // Temporary Phase 0 token specimen. This page will be entirely replaced in Phase 2.
 
 import { coaches } from "@/content/coaches";
+import { amenities } from "@/content/amenities";
 import { facilityStats } from "@/content/facility-stats";
 import { hours } from "@/content/hours";
 import { location } from "@/content/location";
@@ -46,6 +47,10 @@ const contentStatus = [
   { file: "location.ts", status: location.verified ? "verified" : "unverified" },
   { file: "hours.ts", status: hours.verified ? "verified" : "unverified" },
   {
+    file: "amenities.ts",
+    status: amenities.verified ? "verified" : "unverified",
+  },
+  {
     file: "zones.ts",
     status: zones.every((zone) => zone.verified) ? "verified" : "unverified",
   },
@@ -59,6 +64,12 @@ const contentStatus = [
   },
   { file: "coaches.ts", status: coaches.verified ? "verified" : "unverified" },
 ] as const;
+
+const radiusClassNames = {
+  sm: "rounded-cc-sm",
+  md: "rounded-cc-md",
+  lg: "rounded-cc-lg",
+} as const;
 
 function Label({ children }: Readonly<{ children: React.ReactNode }>) {
   return <p className="t-caption text-muted">{children}</p>;
@@ -138,7 +149,7 @@ export default function Home() {
           {(["sm", "md", "lg"] as const).map((radius) => (
             <div key={radius}>
               <div
-                className="size-24 border border-hairline-strong bg-surface-1"
+                className={`size-24 border border-hairline-strong bg-surface-1 ${radiusClassNames[radius]}`}
                 style={{ borderRadius: `var(--radius-cc-${radius})` }}
               />
               <p className="t-caption mt-2">--radius-cc-{radius}</p>

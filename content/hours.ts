@@ -1,30 +1,38 @@
-export type HoursEntry = {
-  day: string;
-  open: string;
-  close: string;
-  closed?: boolean;
+export type SessionType = "mixed" | "womens";
+
+export type HoursSegment = {
+  start: string; // 24-hour "HH:MM"
+  end: string; // 24-hour "HH:MM"
+  type: SessionType;
+  label: string; // display label
 };
 
 export type Hours = {
-  general: HoursEntry[];
-  womens: HoursEntry[];
+  opens: string; // 24-hour "HH:MM"
+  closes: string; // 24-hour "HH:MM"
+  appliesTo: string; // which days this schedule covers
+  dailySegments: HoursSegment[];
   notes: string[];
   verified: boolean;
 };
 
-const placeholderWeek: HoursEntry[] = [
-  { day: "Monday", open: "00:00", close: "00:00" },
-  { day: "Tuesday", open: "00:00", close: "00:00" },
-  { day: "Wednesday", open: "00:00", close: "00:00" },
-  { day: "Thursday", open: "00:00", close: "00:00" },
-  { day: "Friday", open: "00:00", close: "00:00" },
-  { day: "Saturday", open: "00:00", close: "00:00" },
-  { day: "Sunday", open: "00:00", close: "00:00" },
-];
-
 export const hours: Hours = {
-  general: placeholderWeek.map((entry) => ({ ...entry })),
-  womens: placeholderWeek.map((entry) => ({ ...entry })),
+  opens: "06:00",
+  // "00:00" means midnight at the end of the same day.
+  closes: "00:00",
+  appliesTo: "Monday – Sunday",
+  dailySegments: [
+    { start: "06:00", end: "10:00", type: "mixed", label: "General" },
+    {
+      start: "10:00",
+      end: "17:00",
+      type: "womens",
+      label: "Women only",
+    },
+    { start: "17:00", end: "00:00", type: "mixed", label: "General" },
+  ],
   notes: [],
+  // Whether the mixed segments are genuinely co-ed and whether Friday follows
+  // the same schedule are both awaiting client confirmation.
   verified: false,
 };

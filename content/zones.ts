@@ -36,9 +36,16 @@ export const zones: Zone[] = [
     verified: true,
   },
   {
+    slug: "yoga-studio",
+    name: "Yoga Studio",
+    description: "[PLACEHOLDER] Yoga studio zone description.",
+    image: null,
+    verified: true,
+  },
+  {
     slug: "recovery",
     name: "Recovery",
-    description: "[PLACEHOLDER] Recovery zone description.",
+    description: "[PLACEHOLDER] Recovery zone covering steam and ice bath.",
     image: null,
     verified: true,
   },
