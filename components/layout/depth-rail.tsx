@@ -17,7 +17,7 @@ export function DepthRail() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const viewport = window.matchMedia("(min-width: 1440px)");
+    const viewport = window.matchMedia("(min-width: 1600px)");
     const updateViewport = () => setVisible(viewport.matches);
     const frame = window.requestAnimationFrame(updateViewport);
     viewport.addEventListener("change", updateViewport);
