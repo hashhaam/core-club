@@ -109,6 +109,29 @@ body {
   text-transform: uppercase;
 }
 
+.headline-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(185, 190, 198, 0.55);
+  paint-order: stroke fill;
+}
+
+@supports not (-webkit-text-stroke: 1px black) {
+  .headline-outline {
+    color: rgba(185, 190, 198, 0.55);
+    -webkit-text-stroke: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .headline-outline {
+    -webkit-text-stroke: 1px rgba(185, 190, 198, 0.7);
+  }
+}
+
+.headline-solid {
+  color: #F4F6F8;
+}
+
 .t-h2 {
   font-family: var(--font-display), sans-serif;
   font-variation-settings: "wght" 700, "wdth" 112;
@@ -186,6 +209,50 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up 500ms var(--ease-cc) both;
+}
+
+.fade-up-delay-120 {
+  animation-delay: 120ms;
+}
+
+.fade-up-delay-240 {
+  animation-delay: 240ms;
+}
+
+@keyframes scroll-cue {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(42px);
+  }
+}
+
+.scroll-cue-dot {
+  animation: scroll-cue 2s var(--ease-cc) infinite;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .container-cc {
   width: 100%;
   max-width: 1240px;
@@ -206,6 +273,12 @@ body {
 /* Later phases must additionally read this media query in JavaScript via
    matchMedia; CSS alone is not sufficient for motion-sensitive logic. */
 @media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
   *,
   *::before,
   *::after {
