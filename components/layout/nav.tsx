@@ -133,7 +133,7 @@ export function Nav() {
             <Button
               variant="primary"
               href="/#pre-register"
-              className="shrink-0 px-4! lg:px-[30px]!"
+              className="hidden! shrink-0 px-4! lg:inline-flex! lg:px-[30px]!"
             >
               {site.preLaunch.navCtaLabel}
             </Button>
