@@ -28,9 +28,6 @@ export function Hero() {
       <div className="container-cc relative z-[var(--z-content)]">
         <div className="fade-up mb-7">
           <p className="t-eyebrow text-titanium">CORE CLUB / FAISALABAD</p>
-          <p className="t-eyebrow mt-3 text-muted">
-            OPENING {site.preLaunch.openingDateLabel.toUpperCase()}
-          </p>
         </div>
 
         <h1 className="t-hero max-w-[20ch]">
