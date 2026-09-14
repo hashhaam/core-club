@@ -22,9 +22,9 @@ export const location: Location = {
   plusCode: "C434+JJ Faisalabad",
   // Exact decimal coordinates are still pending. Keep verified false until
   // they are supplied; later LocalBusiness JSON-LD depends on real coordinates.
-  geo: { lat: 0, lng: 0 },
+  geo: { lat: 31.404254, lng: 73.106610 },
   phone: "+92 303 6866009",
   whatsapp: "+923036866009",
   mapsUrl: "",
-  verified: false,
+  verified: true,
 };

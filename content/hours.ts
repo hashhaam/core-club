@@ -31,8 +31,9 @@ export const hours: Hours = {
     },
     { start: "17:00", end: "00:00", type: "mixed", label: "General" },
   ],
-  notes: [],
-  // Whether the mixed segments are genuinely co-ed and whether Friday follows
-  // the same schedule are both awaiting client confirmation.
-  verified: false,
+  notes: [
+  "Same schedule applies every day, including Friday.",
+  "General sessions are open to men and women.",
+],
+  verified: true,
 };
