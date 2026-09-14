@@ -1,6 +1,9 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 
+import { DepthRail } from "@/components/layout/depth-rail";
+import { Footer } from "@/components/layout/footer";
+import { Nav } from "@/components/layout/nav";
 import { site } from "@/content/site";
 
 import { archivo, inter } from "./fonts";
@@ -25,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
+        <Nav />
         <div
           aria-hidden="true"
           style={{
@@ -45,6 +49,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Analytics />
+        <DepthRail />
+        <Footer />
       </body>
     </html>
   );
