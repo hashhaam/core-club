@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { site } from "@/content/site";
 
@@ -7,7 +9,15 @@ export function Hero() {
       id="threshold"
       className="relative flex min-h-[100svh] items-center overflow-hidden bg-core-black"
     >
-      {/* TODO: replace with real exterior night photography when available — this section is built to accept a background <Image> later without restructuring; the gradient layers above are the pre-photography fallback, not the final design. */}
+      {/* TODO: TEMPORARY GENERATED CONCEPT ART — replace with real Core Club exterior night photography before launch. */}
+      <Image
+        src="/images/club/hero-exterior.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        priority
+        className="object-cover"
+      />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"

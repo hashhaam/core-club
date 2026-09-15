@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { hours } from "@/content/hours";
 
@@ -10,7 +12,7 @@ function formatTime(time: string): string {
 }
 
 export function WomensHours() {
-  // TODO: replace with real photography of the women's training area once available.
+  // TODO: TEMPORARY GENERATED CONCEPT ART — replace with real women's-area photography before launch.
   return (
     <section id="womens-hours" className="section-cc bg-surface-1">
       <div className="container-cc grid items-center gap-12 lg:grid-cols-2">
@@ -47,12 +49,12 @@ export function WomensHours() {
           aria-hidden="true"
           className="relative aspect-[4/5] overflow-hidden rounded-cc-lg bg-surface-2"
         >
-          <div
-            className="pointer-events-none absolute inset-0"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, rgba(185,190,198,0.04) 0px, rgba(185,190,198,0.04) 1px, transparent 1px, transparent 12px)",
-            }}
+          <Image
+            src="/images/club/womens-hours.webp"
+            alt=""
+            fill
+            sizes="(max-width: 1023px) 100vw, 50vw"
+            className="object-cover"
           />
           <div
             className="pointer-events-none absolute inset-0"
