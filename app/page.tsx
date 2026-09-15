@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/hero";
 import { Reception } from "@/components/sections/reception";
 import { StrengthFloor } from "@/components/sections/strength-floor";
+import { Equipment } from "@/components/sections/equipment";
 import { WomensHours } from "@/components/sections/womens-hours";
 import { TheClub } from "@/components/sections/the-club";
 
@@ -12,7 +13,8 @@ export default function Home() {
       <Hero />
       <Reception />
       <StrengthFloor />
-      {/* TODO Phase 3b/3c/3d: Equipment (03), Coaching (04), Membership (05) insert here */}
+      <Equipment />
+      {/* TODO Phase 3c/3d: Coaching (04), Membership (05) insert here */}
       <WomensHours />
       <TheClub />
     </>
