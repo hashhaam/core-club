@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { zones } from "@/content/zones";
 
 export function StrengthFloor() {
@@ -20,15 +22,25 @@ export function StrengthFloor() {
               tabIndex={0}
               className="relative aspect-[16/11] w-full overflow-hidden rounded-cc-md bg-surface-2 lg:h-[560px] lg:w-[420px] lg:flex-none lg:snap-start lg:aspect-auto"
             >
-              {/* TODO: when zone.image becomes non-null, render it as the card's background via next/image with fill, replacing the diagonal-texture fallback above — do not remove the bottom gradient, it stays for text legibility over the real photo too. */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(135deg, rgba(185,190,198,0.04) 0px, rgba(185,190,198,0.04) 1px, transparent 1px, transparent 12px)",
-                }}
-              />
+              {/* TODO: replace each temporary generated concept image with real zone photography before launch. */}
+              {zone.image ? (
+                <Image
+                  src={zone.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 420px"
+                  className="object-cover"
+                />
+              ) : (
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0"
+                  style={{
+                    backgroundImage:
+                      "repeating-linear-gradient(135deg, rgba(185,190,198,0.04) 0px, rgba(185,190,198,0.04) 1px, transparent 1px, transparent 12px)",
+                  }}
+                />
+              )}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0"
