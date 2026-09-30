@@ -25,7 +25,7 @@ export const site: SiteConfig = {
   url: "https://coreclub.pk",
   nav: [
     { label: "Facilities", href: "/facilities" },
-    { label: "Memberships", href: "/memberships" },
+    { label: "Memberships", href: "/#membership" },
     { label: "Coaching", href: "/trainers" },
     { label: "Women's Hours", href: "/womens-hours" },
     { label: "Contact", href: "/contact" },
