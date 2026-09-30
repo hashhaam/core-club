@@ -102,7 +102,7 @@ export function TheClub() {
         <div className="container-cc">
           <h2 className="t-h2 headline-solid">Built From The Core</h2>
           <p className="t-small mt-4 text-muted">{site.preLaunch.supportingLine}</p>
-          <Button variant="primary" href="/#the-club" className="mt-8">
+          <Button variant="primary" href="/#membership" className="mt-8">
             {site.preLaunch.heroPrimaryLabel}
           </Button>
         </div>
