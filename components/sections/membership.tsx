@@ -83,8 +83,8 @@ export function Membership() {
           <p className="t-small text-titanium">
             Pre-booking opens {memberships.preBookingOpens}.
           </p>
-          <Button variant="primary" href="/#the-club">
-            CONTACT TO PRE-REGISTER
+          <Button variant="primary" href="/pre-register">
+            PRE-REGISTER
           </Button>
         </div>
       </div>
