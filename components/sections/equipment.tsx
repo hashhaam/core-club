@@ -184,9 +184,10 @@ export function Equipment() {
       <div className="container-cc relative z-10 grid items-center gap-12 lg:grid-cols-2">
         <div>
           <p className="t-eyebrow text-muted">03 / EQUIPMENT</p>
-          <h2 className="t-h2 mt-6 text-core-white">Equipment that holds its standard.</h2>
+          <h2 className="t-h2 mt-6 text-core-white">Built for serious training.</h2>
           <p className="t-body mt-4 max-w-[46ch] text-titanium">
-            Commercial-grade plates, calibrated and maintained.
+            Panatta equipment sits alongside dedicated free-weight and machine
+            zones across the strength floor.
           </p>
         </div>
         <div className="@container order-first w-full lg:order-none">

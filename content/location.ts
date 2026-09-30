@@ -14,7 +14,8 @@ export type Location = {
 
 export const location: Location = {
   addressLines: [
-    "Harrian Wala Chowk, opposite Chase Value",
+    "Harrian Wala Chowk",
+    "Opposite Chase Value",
     "D Ground, Block B",
   ],
   city: "Faisalabad",

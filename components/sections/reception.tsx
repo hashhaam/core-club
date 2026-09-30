@@ -1,11 +1,6 @@
 import { facilityStats } from "@/content/facility-stats";
-import { site } from "@/content/site";
 
 export function Reception() {
-  const [positioningLead, ...positioningRemainder] =
-    site.positioning.split(" — ");
-  const positioningDetail = positioningRemainder.join(" — ");
-
   return (
     <section
       id="reception"
@@ -19,17 +14,11 @@ export function Reception() {
       <div className="container-cc relative z-[var(--z-content)]">
         <p className="t-eyebrow text-muted">01 / RECEPTION</p>
         <h2 className="t-h2 mt-8 max-w-3xl text-core-white">
-          <span>{positioningLead}</span>
-          {positioningDetail ? (
-            <>
-              <span> — </span>
-              <span className="text-titanium">{positioningDetail}</span>
-            </>
-          ) : null}
+          A performance club built for focused training.
         </h2>
         <p className="t-body mt-6 max-w-[62ch] text-muted">
-          [PLACEHOLDER] Supporting paragraph copy pending — final wording to
-          come from the content pass.
+          Train across dedicated strength, cardio, functional, yoga and recovery
+          spaces, with coaching available when you need more structure.
         </p>
 
         {facilityStats.verified ? (

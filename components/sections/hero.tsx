@@ -37,7 +37,7 @@ export function Hero() {
 
       <div className="container-cc relative z-[var(--z-content)]">
         <div className="fade-up mb-7">
-          <p className="t-eyebrow text-titanium">CORE CLUB / FAISALABAD</p>
+          <p className="t-eyebrow text-titanium">CORE CLUB / D GROUND, FAISALABAD</p>
         </div>
 
         <h1 className="t-hero max-w-[20ch]">
@@ -46,8 +46,7 @@ export function Hero() {
         </h1>
 
         <p className="t-body fade-up fade-up-delay-120 mt-8 max-w-[52ch] text-titanium">
-          A premium performance club in Faisalabad. Strength, conditioning and
-          recovery under one roof.
+          {site.positioning}
         </p>
 
         <div className="fade-up fade-up-delay-240 mt-8">

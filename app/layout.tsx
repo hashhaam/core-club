@@ -12,10 +12,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Core Club | Premium Gym in Faisalabad",
-    template: "%s — Core Club | Premium Gym in Faisalabad",
+    default: "Core Club | Premium Gym in D Ground, Faisalabad",
+    template: "%s — Core Club | Premium Gym in D Ground, Faisalabad",
   },
-  description: site.positioning,
+  description:
+    "Core Club is a premium gym in D Ground, Faisalabad, with dedicated spaces for strength, cardio, functional training, yoga and recovery, plus coaching and women-only hours.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
