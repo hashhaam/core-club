@@ -90,7 +90,7 @@ export function TheClub() {
               </address>
               {hours.verified && (
                 <p className="t-body t-tabular mt-4 text-titanium">
-                  {formatTime(hours.opens)}–{formatTime(hours.closes)}
+                  {formatTime(hours.opens)} – {formatTime(hours.closes)}
                 </p>
               )}
             </div>

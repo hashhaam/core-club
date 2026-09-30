@@ -20,8 +20,8 @@ export function WomensHours() {
           <p className="t-eyebrow text-muted">06 / WOMEN&apos;S HOURS</p>
           <h2 className="t-h2 headline-solid mt-6">Women&apos;s Hours</h2>
           <p className="t-body mt-6 max-w-[52ch] text-titanium">
-            [PLACEHOLDER] Details on dedicated staffing and arrangements pending —
-            final wording to come from the content pass.
+            Every day from 10 AM to 5 PM, Core Club is reserved for women.
+            Co-Timings run from 6 AM to 10 AM and again from 5 PM to 1 AM.
           </p>
 
           {hours.verified && (

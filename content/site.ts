@@ -19,9 +19,9 @@ export type SiteConfig = {
 
 export const site: SiteConfig = {
   name: "Core Club",
-  slogan: "Built from the Core",
+  slogan: "Built From The Core",
   positioning:
-    "Core Club is Faisalabad's premium performance club — designed for people who take training seriously.",
+    "A performance-focused gym in D Ground, Faisalabad, built around strength, conditioning and recovery.",
   url: "https://coreclub.pk",
   nav: [
     { label: "Facilities", href: "/facilities" },
@@ -49,6 +49,6 @@ export const site: SiteConfig = {
     heroPrimaryLabel: "PRE-REGISTER",
     heroSecondaryLabel: "EXPLORE THE CLUB",
     supportingLine:
-      "Founding member pre-booking opens 1 October for the first 200 members.",
+      "Founding Member Pre-Booking opens 1 October for the first 200 members.",
   },
 };

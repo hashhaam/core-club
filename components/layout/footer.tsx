@@ -85,12 +85,12 @@ export function Footer() {
             {hours.verified && (
               <div className="t-small t-tabular mt-6 space-y-3 text-titanium">
                 <p>
-                  {formatTime(hours.opens)}–{formatTime(hours.closes)}
+                  {formatTime(hours.opens)} – {formatTime(hours.closes)}
                 </p>
                 <ul className="space-y-2">
                   {hours.dailySegments.map((segment) => (
                     <li key={segment.start}>
-                      {segment.label}: {formatTime(segment.start)}–
+                      {segment.label}: {formatTime(segment.start)} –{" "}
                       {formatTime(segment.end)}
                     </li>
                   ))}

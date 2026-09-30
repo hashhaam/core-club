@@ -51,7 +51,7 @@ export function StrengthFloor() {
               />
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <h3 className="t-h3 text-core-white">{zone.name}</h3>
-                <p className="t-small mt-2 truncate text-titanium">
+                <p className="t-small mt-2 text-titanium">
                   {zone.description}
                 </p>
               </div>
