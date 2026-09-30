@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { hours } from "@/content/hours";
 import { location } from "@/content/location";
 import { site } from "@/content/site";
+import { SocialIcon } from "@/components/layout/social-icon";
 
 function formatTime(time: string): string {
   const [hour, minutes] = time.split(":");
@@ -18,18 +20,14 @@ export function Footer() {
       <div className="container-cc">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-8">
           <div>
-            <div style={{ filter: "brightness(0) invert(1)" }}>
-              {/* Static SVG: intentionally keep the public asset as requested. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/logo/lockup.svg"
-                alt={site.name}
-                width={644}
-                height={743}
-                className="h-24 w-auto"
-              />
-            </div>
-            <p className="t-caption mt-6 text-muted">{site.slogan}</p>
+            <Image
+              src="/logo/footer-lockup.png"
+              alt="Core Club — Built From The Core"
+              width={582}
+              height={783}
+              className="h-40 w-auto"
+              unoptimized
+            />
           </div>
           <div>
             <h2 className="t-eyebrow text-muted">NAVIGATE</h2>
@@ -109,8 +107,9 @@ export function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="t-small text-titanium hover:text-core-white"
+                      className="t-small inline-flex items-center gap-2 text-titanium hover:text-core-white"
                     >
+                      <SocialIcon platform={social.platform} />
                       {social.platform}
                     </a>
                   </li>

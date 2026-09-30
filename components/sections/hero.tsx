@@ -58,7 +58,7 @@ export function Hero() {
               {site.preLaunch.heroSecondaryLabel}
             </Button>
           </div>
-          <p className="t-small mt-4 text-muted">
+          <p className="t-small mt-4 font-semibold leading-relaxed text-core-white">
             {site.preLaunch.supportingLine}
           </p>
         </div>

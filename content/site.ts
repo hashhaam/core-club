@@ -41,6 +41,16 @@ export const site: SiteConfig = {
       href: "https://facebook.com/coreclubgym",
       verified: true,
     },
+    {
+      platform: "TikTok",
+      href: "https://www.tiktok.com/@coreclubgym",
+      verified: true,
+    },
+    {
+      platform: "LinkedIn",
+      href: "https://www.linkedin.com/company/core-club-gym",
+      verified: true,
+    },
   ],
   preLaunch: {
     active: true,
