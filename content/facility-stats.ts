@@ -14,7 +14,7 @@ export const facilityStats: FacilityStats = {
   // figure exists. 19 hours is derived from the confirmed 06:00–01:00 schedule.
   stats: [
     { value: "2", label: "Kanals" },
-    { value: "6", label: "Coaching Staff" },
+    { value: "10", label: "Coaching Staff" },
     { value: "19", label: "Hours Daily" },
     { value: "7", label: "Days Each Week" },
   ],

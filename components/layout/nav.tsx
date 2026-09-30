@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -77,20 +78,14 @@ export function Nav() {
             aria-label="Core Club home"
             className="shrink-0 lg:flex-1"
           >
-            <span
-              className="block h-7 w-7 text-core-white"
-              style={{ filter: "brightness(0) invert(1)" }}
-            >
-              {/* Static SVG: intentionally keep the public asset as requested. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/logo/mark.svg"
-                alt=""
-                width={28}
-                height={28}
-                className="h-7 w-7"
-              />
-            </span>
+            <Image
+              src="/logo/header-lockup.png"
+              alt="Core Club"
+              width={887}
+              height={336}
+              className="h-10 w-auto lg:h-11"
+              unoptimized
+            />
           </Link>
           <ul className="hidden items-center gap-6 lg:flex">
             {site.nav.map((link) => (
