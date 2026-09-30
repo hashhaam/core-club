@@ -63,13 +63,19 @@ export function Footer() {
                   </p>
                 </div>
                 <a
-                  href={`tel:${location.phone.replace(/\s/g, "")}`}
+                  href={`tel:${location.phone.replace(/\D/g, "")}`}
                   className="block hover:text-core-white"
                 >
                   {location.phone}
                 </a>
                 <a
-                  href={`https://wa.me/${location.whatsapp.replace(/^\+/, "")}`}
+                  href={`tel:${location.secondaryPhone.replace(/\D/g, "")}`}
+                  className="block hover:text-core-white"
+                >
+                  {location.secondaryPhone}
+                </a>
+                <a
+                  href={`https://wa.me/${location.whatsapp.replace(/\D/g, "")}`}
                   className="block hover:text-core-white"
                 >
                   WhatsApp: {location.whatsapp}

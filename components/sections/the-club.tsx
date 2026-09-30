@@ -70,13 +70,19 @@ export function TheClub() {
                   </p>
                 </div>
                 <a
-                  href={`tel:${location.phone.replace(/\s/g, "")}`}
+                  href={`tel:${location.phone.replace(/\D/g, "")}`}
                   className="block hover:text-core-white"
                 >
                   {location.phone}
                 </a>
                 <a
-                  href={`https://wa.me/${location.whatsapp.replace(/^\+/, "")}`}
+                  href={`tel:${location.secondaryPhone.replace(/\D/g, "")}`}
+                  className="block hover:text-core-white"
+                >
+                  {location.secondaryPhone}
+                </a>
+                <a
+                  href={`https://wa.me/${location.whatsapp.replace(/\D/g, "")}`}
                   className="block hover:text-core-white"
                 >
                   WhatsApp: {location.whatsapp}
@@ -95,7 +101,8 @@ export function TheClub() {
       <div className="bg-surface-1 py-24 text-center">
         <div className="container-cc">
           <h2 className="t-h2 headline-solid">Built From The Core</h2>
-          <Button variant="primary" href="/#pre-register" className="mt-8">
+          <p className="t-small mt-4 text-muted">{site.preLaunch.supportingLine}</p>
+          <Button variant="primary" href="/#the-club" className="mt-8">
             {site.preLaunch.heroPrimaryLabel}
           </Button>
         </div>

@@ -52,10 +52,10 @@ export function Hero() {
 
         <div className="fade-up fade-up-delay-240 mt-8">
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary" href="/#pre-register">
+            <Button variant="primary" href="/#the-club">
               {site.preLaunch.heroPrimaryLabel}
             </Button>
-            <Button variant="secondary" href="/memberships">
+            <Button variant="secondary" href="/#strength-floor">
               {site.preLaunch.heroSecondaryLabel}
             </Button>
           </div>

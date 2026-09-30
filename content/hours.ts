@@ -18,22 +18,32 @@ export type Hours = {
 
 export const hours: Hours = {
   opens: "06:00",
-  // "00:00" means midnight at the end of the same day.
-  closes: "00:00",
+  // The evening segment closes at 01:00 on the following calendar day.
+  closes: "01:00",
   appliesTo: "Monday – Sunday",
   dailySegments: [
-    { start: "06:00", end: "10:00", type: "mixed", label: "General" },
+    {
+      start: "06:00",
+      end: "10:00",
+      type: "mixed",
+      label: "Co-Timings",
+    },
     {
       start: "10:00",
       end: "17:00",
       type: "womens",
-      label: "Women only",
+      label: "Women Only",
     },
-    { start: "17:00", end: "00:00", type: "mixed", label: "General" },
+    {
+      start: "17:00",
+      end: "01:00",
+      type: "mixed",
+      label: "Co-Timings",
+    },
   ],
   notes: [
   "Same schedule applies every day, including Friday.",
-  "General sessions are open to men and women.",
+  "Co-Timings are open to men and women.",
 ],
   verified: true,
 };
