@@ -26,7 +26,7 @@ export const site: SiteConfig = {
   nav: [
     { label: "Facilities", href: "/facilities" },
     { label: "Memberships", href: "/#membership" },
-    { label: "Coaching", href: "/trainers" },
+    { label: "Coaching", href: "/#coaching" },
     { label: "Women's Hours", href: "/womens-hours" },
     { label: "Contact", href: "/contact" },
   ],
