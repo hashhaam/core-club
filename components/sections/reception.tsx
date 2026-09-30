@@ -33,7 +33,7 @@ export function Reception() {
         </p>
 
         {facilityStats.verified ? (
-          <dl className="mt-12 flex flex-wrap gap-12">
+          <dl className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4 lg:gap-x-8 xl:gap-x-12">
             {facilityStats.stats.map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <dt className="t-eyebrow mt-3 text-muted">{stat.label}</dt>

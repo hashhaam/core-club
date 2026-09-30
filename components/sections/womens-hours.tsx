@@ -40,8 +40,8 @@ export function WomensHours() {
             </ul>
           )}
 
-          <Button variant="primary" href="/womens-hours" className="mt-8">
-            VIEW FULL DETAILS
+          <Button variant="primary" href="/#the-club" className="mt-8">
+            ASK ABOUT HOURS
           </Button>
         </div>
 

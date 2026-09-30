@@ -132,7 +132,7 @@ export function Nav() {
             </div>
             <Button
               variant="primary"
-              href="/#pre-register"
+              href="/#the-club"
               className="hidden! shrink-0 px-4! lg:inline-flex! lg:px-[30px]!"
             >
               {site.preLaunch.navCtaLabel}
@@ -176,7 +176,7 @@ export function Nav() {
             </ul>
             <Button
               variant="primary"
-              href="/#pre-register"
+              href="/#the-club"
               className="self-start"
             >
               {site.preLaunch.navCtaLabel}

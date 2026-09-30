@@ -1,10 +1,6 @@
 export type PreLaunch = {
   active: boolean;
-  openingDate: string; // ISO date
-  openingDateLabel: string; // human-readable, for display
-  discountPercent: number;
-  foundingSlots: number; 
-  discountScope: string; // what the discount applies to
+  foundingSlots: number;
   navCtaLabel: string;
   heroPrimaryLabel: string;
   heroSecondaryLabel: string;
@@ -40,18 +36,19 @@ export const site: SiteConfig = {
       href: "https://instagram.com/coreclubgym",
       verified: true,
     },
-    { platform: "Facebook", href: "", verified: false },
+    {
+      platform: "Facebook",
+      href: "https://facebook.com/coreclubgym",
+      verified: true,
+    },
   ],
   preLaunch: {
-  active: true,
-  openingDate: "2026-09-28",
-  openingDateLabel: "28 September 2026",
-  discountPercent: 30,
-  foundingSlots: 200,
-  discountScope: "for life",
-  navCtaLabel: "PRE-REGISTER",
-  heroPrimaryLabel: "PRE-REGISTER",
-  heroSecondaryLabel: "VIEW MEMBERSHIPS",
-  supportingLine: "30% off, locked in for life — reserved for the first 200 members who pre-register.",
-},
+    active: true,
+    foundingSlots: 200,
+    navCtaLabel: "PRE-REGISTER",
+    heroPrimaryLabel: "PRE-REGISTER",
+    heroSecondaryLabel: "EXPLORE THE CLUB",
+    supportingLine:
+      "Founding member pre-booking opens 1 October for the first 200 members.",
+  },
 };
