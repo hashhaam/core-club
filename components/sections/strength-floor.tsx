@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 
+import { Reveal } from "@/components/motion/reveal";
+import { Facilities } from "@/components/sections/facilities";
 import { zones } from "@/content/zones";
 
 export function StrengthFloor() {
   return (
     <section id="strength-floor" className="section-cc bg-core-black">
       <div className="container-cc">
-        <p className="t-eyebrow text-muted">02 / STRENGTH FLOOR</p>
+        <Reveal>
+          <p className="t-eyebrow text-gold-lift">STRENGTH FLOOR</p>
+        </Reveal>
 
         <div
           role="region"
@@ -16,10 +20,12 @@ export function StrengthFloor() {
           tabIndex={0}
           className="scrollbar-hide mt-8 flex flex-col gap-6 lg:overflow-x-auto lg:snap-x lg:snap-mandatory lg:scroll-pl-6 lg:flex-row"
         >
-          {zones.map((zone) => (
-            <article
+          {zones.map((zone, index) => (
+            <Reveal
+              as="article"
               key={zone.slug}
               tabIndex={0}
+              delay={(index % 3) * 0.06}
               className="relative aspect-[16/11] w-full overflow-hidden rounded-cc-md bg-surface-2 lg:h-[560px] lg:w-[420px] lg:flex-none lg:snap-start lg:aspect-auto"
             >
               {/* TODO: replace each temporary generated concept image with real zone photography before launch. */}
@@ -55,9 +61,11 @@ export function StrengthFloor() {
                   {zone.description}
                 </p>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
+
+        <Facilities />
       </div>
     </section>
   );

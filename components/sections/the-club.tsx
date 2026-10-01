@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { hours } from "@/content/hours";
@@ -40,7 +41,7 @@ export function TheClub() {
       {location.verified && (
         <div className="section-cc">
           <div className="container-cc grid items-center gap-12 lg:grid-cols-2">
-            <div>
+            <Reveal>
               <iframe
                 src={`https://maps.google.com/maps?q=${location.geo.lat},${location.geo.lng}&z=16&output=embed`}
                 className="w-full h-[360px] rounded-cc-md border border-hairline grayscale-[0.3] contrast-[1.1]"
@@ -56,9 +57,9 @@ export function TheClub() {
               >
                 Get Directions →
               </a>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal delay={0.08}>
               <h2 className="t-h2 headline-solid">The Club</h2>
               <address className="t-body mt-8 space-y-4 text-titanium not-italic">
                 <div>
@@ -93,18 +94,20 @@ export function TheClub() {
                   {formatTime(hours.opens)} – {formatTime(hours.closes)}
                 </p>
               )}
-            </div>
+            </Reveal>
           </div>
         </div>
       )}
 
       <div className="bg-surface-1 py-24 text-center">
         <div className="container-cc">
-          <h2 className="t-h2 headline-solid">Built From The Core</h2>
-          <p className="t-small mt-4 text-muted">{site.preLaunch.supportingLine}</p>
-          <Button variant="primary" href="/pre-register" className="mt-8">
-            {site.preLaunch.heroPrimaryLabel}
-          </Button>
+          <Reveal>
+            <h2 className="t-h2 headline-solid">Built From The Core</h2>
+            <p className="t-small mt-4 text-muted">{site.preLaunch.supportingLine}</p>
+            <Button variant="primary" href="/pre-register" className="mt-8">
+              {site.preLaunch.heroPrimaryLabel}
+            </Button>
+          </Reveal>
         </div>
       </div>
     </section>

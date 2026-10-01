@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { memberships } from "@/content/memberships";
 
@@ -17,22 +18,26 @@ export function Membership() {
       className="section-cc scroll-mt-16 border-t border-hairline bg-core-black lg:scroll-mt-[76px]"
     >
       <div className="container-cc">
-        <p className="t-eyebrow text-muted">05 / MEMBERSHIP</p>
-        <h2 id="membership-heading" className="t-h2 headline-solid mt-6">
-          <span className="block">Founding Member</span>
-          <span className="block">Pre-Booking</span>
-        </h2>
-        <p className="t-body mt-6 max-w-[66ch] text-titanium">
-          Choose the membership term that suits your training. Founding rates
-          are available to the first {memberships.foundingMemberLimit} members,
-          with the {formatPrice(memberships.registrationFee.regular)} registration
-          fee waived.
-        </p>
+        <Reveal>
+          <p className="t-eyebrow text-gold-lift">MEMBERSHIP</p>
+          <h2 id="membership-heading" className="t-h2 headline-solid mt-6">
+            <span className="block">Founding Member</span>
+            <span className="block">Pre-Booking</span>
+          </h2>
+          <p className="t-body mt-6 max-w-[66ch] text-titanium">
+            Choose the membership term that suits your training. Founding rates
+            are available to the first {memberships.foundingMemberLimit} members,
+            with the {formatPrice(memberships.registrationFee.regular)} registration
+            fee waived.
+          </p>
+        </Reveal>
 
         <ol className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {memberships.plans.map((plan) => (
-            <li
+          {memberships.plans.map((plan, index) => (
+            <Reveal
+              as="li"
               key={plan.slug}
+              delay={index * 0.06}
               className="flex min-w-0 flex-col rounded-cc-md border border-hairline bg-surface-1 p-6"
             >
               <h3 className="t-h3 text-core-white">
@@ -58,11 +63,11 @@ export function Membership() {
                   </dd>
                 </div>
               </dl>
-            </li>
+            </Reveal>
           ))}
         </ol>
 
-        <div className="mt-5 flex flex-col gap-4 rounded-cc-md border border-hairline bg-surface-1 p-6 sm:flex-row sm:items-end sm:justify-between lg:p-8">
+        <Reveal className="mt-5 flex flex-col gap-4 rounded-cc-md border border-hairline bg-surface-1 p-6 sm:flex-row sm:items-end sm:justify-between lg:p-8">
           <div>
             <p className="t-eyebrow text-muted">REGISTRATION FEE</p>
             <p className="t-small t-tabular mt-3 text-titanium">
@@ -77,7 +82,7 @@ export function Membership() {
             </span>{" "}
             for the first {memberships.foundingMemberLimit} members
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-10 flex flex-col gap-5 border-t border-hairline pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="t-small text-titanium">

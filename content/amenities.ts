@@ -1,76 +1,95 @@
 export type Amenity = {
   slug: string;
   name: string;
-  description: string;
-  highlight: boolean;
+  description?: string;
+};
+
+export type AmenityGroup = {
+  slug: string;
+  name: string;
+  items: Amenity[];
+  note?: string;
 };
 
 export type Amenities = {
-  list: Amenity[];
+  groups: AmenityGroup[];
   verified: boolean;
 };
 
 export const amenities: Amenities = {
-  list: [
+  groups: [
     {
-      slug: "physio-room",
-      name: "Physio Room",
-      description: "[PLACEHOLDER] Physio room amenity description.",
-      highlight: false,
+      slug: "fuel-nutrition",
+      name: "Fuel & Nutrition",
+      items: [
+        {
+          slug: "fuel-bar",
+          name: "Premium Fuel Bar",
+          description: "Protein, creatine, pre-workout and selected nutrition essentials.",
+        },
+        {
+          slug: "cafe-seating",
+          name: "Café Seating",
+          description: "A sitting area alongside the Fuel Bar.",
+        },
+        {
+          slug: "nutrition-consultation",
+          name: "Nutrition Consultation",
+          description: "Nutrition consultation and custom diet-plan support.",
+        },
+      ],
     },
     {
-      slug: "fuel-bar",
-      name: "Fuel Bar",
-      description: "[PLACEHOLDER] Fuel bar amenity description.",
-      highlight: false,
+      slug: "recovery-wellness",
+      name: "Recovery & Wellness",
+      items: [
+        { slug: "steam", name: "Steam" },
+        { slug: "ice-bath", name: "Ice Bath" },
+        {
+          slug: "massage-chairs",
+          name: "Massage Chairs",
+          description: "Two massage chairs are available.",
+        },
+        {
+          slug: "physiotherapy",
+          name: "In-house Physiotherapy",
+          description: "On-site physiotherapy consultations are available.",
+        },
+      ],
     },
     {
-      slug: "biometric-entry",
-      name: "Biometric Face-Recognition Entry",
-      description: "[PLACEHOLDER] Biometric entry amenity description.",
-      highlight: true,
+      slug: "classes-movement",
+      name: "Classes & Movement",
+      items: [
+        { slug: "yoga", name: "Yoga" },
+        { slug: "zumba", name: "Zumba" },
+        { slug: "karate", name: "Karate" },
+      ],
+      note: "Ask the team for the current class schedule.",
     },
     {
-      slug: "lockers",
-      name: "Public & Private Lockers",
-      description: "[PLACEHOLDER] Locker amenity description.",
-      highlight: false,
-    },
-    {
-      slug: "towel-service",
-      name: "Hygienic Towel Service",
-      description: "[PLACEHOLDER] Towel service amenity description.",
-      highlight: false,
-    },
-    {
-      slug: "parking",
-      name: "Plaza Parking",
-      description: "[PLACEHOLDER] Parking amenity description.",
-      highlight: false,
-    },
-    {
-      slug: "climate-control",
-      name: "Fully Air Conditioned",
-      description: "[PLACEHOLDER] Climate control amenity description.",
-      highlight: false,
-    },
-    {
-      slug: "power-backup",
-      name: "Full Power Backup",
-      description: "[PLACEHOLDER] Power backup amenity description.",
-      highlight: false,
-    },
-    {
-      slug: "sound-system",
-      name: "JBL Sound System",
-      description: "[PLACEHOLDER] Sound system amenity description.",
-      highlight: false,
-    },
-    {
-      slug: "wifi",
-      name: "WiFi",
-      description: "[PLACEHOLDER] WiFi amenity description.",
-      highlight: false,
+      slug: "club-convenience",
+      name: "Club Convenience",
+      items: [
+        { slug: "public-lockers", name: "Public Lockers" },
+        {
+          slug: "executive-lockers",
+          name: "Executive Lockers",
+          description: "Dedicated locker allocation available for a separate Rs. 2,000 fee.",
+        },
+        {
+          slug: "member-app",
+          name: "Member App",
+          description: "Member app access for account and club information.",
+        },
+        { slug: "air-conditioned", name: "Fully Air Conditioned" },
+        { slug: "biometric-entry", name: "Biometric Face-Recognition Entry" },
+        { slug: "towel-service", name: "Hygienic Towel Service" },
+        { slug: "parking", name: "Plaza Parking" },
+        { slug: "power-backup", name: "Full Power Backup" },
+        { slug: "sound-system", name: "JBL Sound System" },
+        { slug: "wifi", name: "WiFi" },
+      ],
     },
   ],
   verified: true,
