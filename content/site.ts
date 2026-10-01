@@ -59,6 +59,6 @@ export const site: SiteConfig = {
     heroPrimaryLabel: "PRE-REGISTER",
     heroSecondaryLabel: "EXPLORE THE CLUB",
     supportingLine:
-      "Founding Member Pre-Booking opens 1 October for the first 200 members.",
+      "Founding Member Pre-Booking is now open for the first 200 members.",
   },
 };

@@ -11,6 +11,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  alternates: { canonical: "/" },
   title: {
     default: "Core Club | Premium Gym in D Ground, Faisalabad",
     template: "%s — Core Club | Premium Gym in D Ground, Faisalabad",

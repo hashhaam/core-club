@@ -47,7 +47,11 @@ export function Hero() {
             <Button variant="primary" href="/pre-register">
               {site.preLaunch.heroPrimaryLabel}
             </Button>
-            <Button variant="secondary" href="/#strength-floor">
+            <Button
+              variant="secondary"
+              href="/#strength-floor"
+              className="border-red-lift! bg-[rgba(181,43,50,0.10)]! text-core-white! hover:bg-[rgba(181,43,50,0.20)]!"
+            >
               {site.preLaunch.heroSecondaryLabel}
             </Button>
           </div>
