@@ -210,6 +210,12 @@ body {
   letter-spacing: -0.02em;
 }
 
+.reception-stat {
+  font-variation-settings: "wght" 800, "wdth" 105;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 0.95;
+}
+
 .t-tabular {
   font-variant-numeric: tabular-nums;
 }
