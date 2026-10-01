@@ -112,16 +112,18 @@ export function ContactForm() {
 
   return (
     <section aria-labelledby="enquiry-heading" className="min-w-0">
-      <form noValidate onSubmit={sendEnquiry} className="rounded-cc-lg border border-hairline bg-surface-1 p-6 sm:p-8">
-        <p className="t-eyebrow text-gold-lift">GENERAL ENQUIRY</p>
-        <h2 id="enquiry-heading" className="t-h3 mt-4 text-core-white">Send an enquiry</h2>
-        <p className="t-small mt-3 text-titanium">
-          Your details will prepare a WhatsApp message for you to send.
-        </p>
+      <form noValidate onSubmit={sendEnquiry} className="rounded-[16px] border border-hairline-strong bg-surface-1 p-6 sm:p-8">
+        <div className="border-b border-hairline-strong pb-6">
+          <p className="t-eyebrow text-titanium">GENERAL ENQUIRY</p>
+          <h2 id="enquiry-heading" className="t-h3 mt-4 text-core-white">Send an enquiry</h2>
+          <p className="t-small mt-3 text-titanium">
+            Your details will prepare a WhatsApp message for you to send.
+          </p>
+        </div>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
           <div className="sm:col-span-2">
-            <label htmlFor="contact-full-name" className="t-small text-core-white">Full Name</label>
+            <label htmlFor="contact-full-name" className="t-small font-medium text-core-white">Full Name</label>
             <input
               ref={nameRef}
               id="contact-full-name"
@@ -139,7 +141,7 @@ export function ContactForm() {
           </div>
 
           <div className="min-w-0">
-            <label htmlFor="contact-phone" className="t-small text-core-white">Phone Number</label>
+            <label htmlFor="contact-phone" className="t-small font-medium text-core-white">Phone Number</label>
             <input
               ref={phoneRef}
               id="contact-phone"
@@ -157,7 +159,7 @@ export function ContactForm() {
           </div>
 
           <div className="min-w-0">
-            <label htmlFor="contact-email" className="t-small text-core-white">Email Address</label>
+            <label htmlFor="contact-email" className="t-small font-medium text-core-white">Email Address</label>
             <input
               ref={emailRef}
               id="contact-email"
@@ -175,7 +177,7 @@ export function ContactForm() {
           </div>
 
           <div className="sm:col-span-2">
-            <label htmlFor="contact-enquiry-type" className="t-small text-core-white">Enquiry Type</label>
+            <label htmlFor="contact-enquiry-type" className="t-small font-medium text-core-white">Enquiry Type</label>
             <select
               ref={typeRef}
               id="contact-enquiry-type"
@@ -194,7 +196,7 @@ export function ContactForm() {
           </div>
 
           <div className="sm:col-span-2">
-            <label htmlFor="contact-message" className="t-small text-core-white">Message</label>
+            <label htmlFor="contact-message" className="t-small font-medium text-core-white">Message</label>
             <textarea
               ref={messageRef}
               id="contact-message"
@@ -211,7 +213,7 @@ export function ContactForm() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-hairline pt-8">
+        <div className="mt-8 border-t border-hairline-strong pt-8">
           <Button type="submit" variant="primary">SEND ENQUIRY ON WHATSAPP</Button>
           <p className="t-small mt-4 text-muted">
             WhatsApp opens with your message ready. You choose when to send it.
