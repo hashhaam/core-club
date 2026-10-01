@@ -13,8 +13,8 @@ function FacilityItem({
   wide?: boolean;
 }) {
   return (
-    <li className={spacious ? "flex min-w-0 flex-1 items-center border-b border-hairline py-5" : wide ? "min-w-0 sm:col-span-2" : compact ? "min-w-0" : "min-w-0 py-4"}>
-      <p className={spacious ? "text-lg font-semibold text-core-white" : "t-small font-semibold text-core-white"}>{item.name}</p>
+    <li className={spacious ? "flex min-w-0 flex-1 items-center border-b border-hairline py-5" : wide ? "min-w-0 lg:col-span-2" : compact ? "min-w-0" : "min-w-0 py-4"}>
+      <p className={spacious ? "text-lg font-semibold text-core-white" : "text-base font-semibold leading-snug text-core-white"}>{item.name}</p>
       {item.description && (
         <p className="t-small mt-1 text-titanium">{item.description}</p>
       )}
@@ -26,9 +26,10 @@ export function Facilities() {
   if (!amenities.verified || amenities.groups.length === 0) return null;
 
   return (
-    <section id="facilities" aria-labelledby="facilities-heading" className="mt-20 scroll-mt-24 border-t border-hairline pt-16 lg:mt-24 lg:pt-20">
+    <section id="facilities" aria-labelledby="facilities-heading" className="relative mt-20 scroll-mt-24 border-t border-hairline-strong pt-16 lg:mt-24 lg:pt-20">
+      <span aria-hidden="true" className="absolute -top-px left-0 h-[3px] w-12 bg-core-red" />
       <Reveal>
-        <p className="t-eyebrow text-gold-lift">FACILITIES & AMENITIES</p>
+        <p className="t-eyebrow text-titanium">FACILITIES & AMENITIES</p>
         <h2 id="facilities-heading" className="t-h2 mt-5 max-w-[22ch] text-core-white">
           Facilities that support the full session.
         </h2>
@@ -44,37 +45,37 @@ export function Facilities() {
             as="article"
             key={group.slug}
             delay={(index % 2) * 0.08}
-            className="flex h-full min-w-0 flex-col rounded-cc-md border border-hairline bg-surface-1 p-6 sm:p-8"
+            className="flex h-full min-w-0 flex-col rounded-cc-sm border border-hairline-strong bg-surface-1 p-6 sm:p-8"
           >
-            <h3 className="t-eyebrow text-gold-lift">{group.name}</h3>
+            <h3 className="t-h3 text-core-white uppercase">{group.name}</h3>
             {group.slug === "club-convenience" ? (
-              <div className="mt-6 border-t border-hairline">
-                <ul className="grid gap-x-6 gap-y-5 py-5 sm:grid-cols-2">
+              <div className="mt-6 border-t border-hairline-strong">
+                <ul className="grid gap-x-6 gap-y-5 py-5 lg:grid-cols-2">
                   {group.items.slice(0, 3).map((item, itemIndex) => (
                     <FacilityItem key={item.slug} item={item} compact wide={itemIndex === 2} />
                   ))}
                 </ul>
-                <ul className="grid gap-x-6 gap-y-4 border-t border-hairline pt-5 sm:grid-cols-2">
+                <ul className="grid gap-x-6 gap-y-4 border-t border-hairline-strong pt-5 lg:grid-cols-2">
                   {group.items.slice(3).map((item) => (
                     <FacilityItem key={item.slug} item={item} compact />
                   ))}
                 </ul>
               </div>
             ) : group.slug === "classes-movement" ? (
-              <ul className="mt-6 flex flex-1 flex-col border-t border-hairline">
+              <ul className="mt-6 flex flex-1 flex-col border-t border-hairline-strong">
                 {group.items.map((item) => (
                   <FacilityItem key={item.slug} item={item} spacious />
                 ))}
               </ul>
             ) : (
-              <ul className="mt-6 divide-y divide-hairline border-t border-hairline">
+              <ul className="mt-6 divide-y divide-hairline-strong border-t border-hairline-strong">
                 {group.items.map((item) => (
                   <FacilityItem key={item.slug} item={item} />
                 ))}
               </ul>
             )}
             {group.note && (
-              <p className="t-small mt-auto border-t border-hairline pt-6 text-titanium">
+              <p className="t-small mt-auto border-t border-hairline-strong pt-6 text-titanium">
                 {group.note}
               </p>
             )}

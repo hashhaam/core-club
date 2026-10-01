@@ -153,6 +153,12 @@ body {
   letter-spacing: -0.025em;
 }
 
+.zone-title {
+  font-variation-settings: "wght" 760, "wdth" 106;
+  font-size: clamp(24px, 2.5vw, 30px);
+  line-height: 1.08;
+}
+
 .t-eyebrow {
   font-family: var(--font-display), sans-serif;
   font-variation-settings: "wght" 650, "wdth" 100;
