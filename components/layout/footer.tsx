@@ -16,9 +16,9 @@ function formatTime(time: string): string {
 
 export function Footer() {
   return (
-    <footer className="border-t border-hairline bg-surface-1 py-16 lg:py-24">
+    <footer className="border-t border-hairline-strong bg-core-black py-16 lg:py-20">
       <div className="container-cc">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1.4fr_1fr] lg:gap-8">
           <div>
             <Image
               src="/logo/footer-lockup.png"
@@ -26,12 +26,13 @@ export function Footer() {
               width={582}
               height={783}
               className="h-40 w-auto"
+              loading="eager"
               unoptimized
             />
           </div>
           <div>
-            <h2 className="t-eyebrow text-muted">NAVIGATE</h2>
-            <ul className="mt-6 space-y-3">
+            <h2 className="t-eyebrow text-titanium">NAVIGATE</h2>
+            <ul className="mt-5 space-y-3">
               {[
                 ...site.nav,
                 { label: "About", href: "/about" },
@@ -49,9 +50,9 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h2 className="t-eyebrow text-muted">VISIT</h2>
+            <h2 className="t-eyebrow text-titanium">VISIT</h2>
             {location.verified && (
-              <address className="t-small mt-6 space-y-3 text-titanium not-italic">
+              <address className="t-small mt-5 space-y-3 text-titanium not-italic">
                 <div>
                   {location.addressLines.map((line) => (
                     <p key={line}>{line}</p>
@@ -81,7 +82,7 @@ export function Footer() {
               </address>
             )}
             {hours.verified && (
-              <div className="t-small t-tabular mt-6 space-y-3 text-titanium">
+              <div className="t-small t-tabular mt-5 space-y-3 text-titanium">
                 <p>
                   {formatTime(hours.opens)} – {formatTime(hours.closes)}
                 </p>
@@ -97,8 +98,8 @@ export function Footer() {
             )}
           </div>
           <div>
-            <h2 className="t-eyebrow text-muted">FOLLOW</h2>
-            <ul className="mt-6 space-y-3">
+            <h2 className="t-eyebrow text-titanium">FOLLOW</h2>
+            <ul className="mt-5 space-y-3">
               {site.social
                 .filter((social) => social.verified)
                 .map((social) => (
@@ -117,7 +118,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-hairline pt-8 lg:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-hairline-strong pt-8 lg:flex-row">
           <p className="t-caption text-muted">
             © {new Date().getFullYear()} Core Club. All rights reserved.
           </p>

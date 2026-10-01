@@ -15,10 +15,10 @@ function formatTime(time: string): string {
 export function WomensHours() {
   // TODO: TEMPORARY GENERATED CONCEPT ART — replace with real women's-area photography before launch.
   return (
-    <section id="womens-hours" className="section-cc bg-surface-1">
-      <div className="container-cc grid items-center gap-12 lg:grid-cols-2">
+    <section id="womens-hours" className="section-cc border-t border-hairline-strong bg-surface-1">
+      <div className="container-cc grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <p className="t-eyebrow text-gold-lift">WOMEN&apos;S HOURS</p>
+          <p className="t-eyebrow text-titanium">WOMEN&apos;S HOURS</p>
           <h2 className="t-h2 headline-solid mt-6">Women&apos;s Hours</h2>
           <p className="t-body mt-6 max-w-[52ch] text-titanium">
             Every day from 10 AM to 5 PM, Core Club is reserved for women.
@@ -26,14 +26,14 @@ export function WomensHours() {
           </p>
 
           {hours.verified && (
-            <ul className="mt-8">
+            <ul className="mt-8 border-t border-hairline-strong">
               {hours.dailySegments.map((segment) => (
                 <li
                   key={segment.start}
-                  className="flex items-baseline justify-between gap-4 border-b border-hairline py-3"
+                  className="flex items-baseline justify-between gap-4 border-b border-hairline-strong py-4 sm:py-5"
                 >
-                  <span className="t-body text-core-white">{segment.label}</span>
-                  <span className="t-tabular whitespace-nowrap text-titanium">
+                  <span className="t-body font-semibold text-core-white">{segment.label}</span>
+                  <span className="t-body t-tabular whitespace-nowrap font-medium text-titanium">
                     {formatTime(segment.start)} – {formatTime(segment.end)}
                   </span>
                 </li>

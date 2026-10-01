@@ -84,6 +84,7 @@ export function Nav() {
               width={887}
               height={336}
               className="h-10 w-auto lg:h-11"
+              loading="eager"
               unoptimized
             />
           </Link>
