@@ -8,10 +8,10 @@ export type CardProps = {
 };
 
 const BASE_CLASSES =
-  "rounded-cc-md border border-[rgba(185,190,198,0.10)] bg-surface-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]";
+  "rounded-cc-sm border border-hairline-strong bg-surface-2";
 
 const INTERACTIVE_CLASSES =
-  "transition-[transform,border-color] duration-[var(--cc-dur)] ease-[var(--ease-cc)] hover:[transform:translateY(-4px)] hover:border-[rgba(185,190,198,0.22)] motion-reduce:hover:[transform:translateY(0)]";
+  "transition-colors duration-[var(--cc-dur-fast)] ease-[var(--ease-cc)] hover:border-[rgba(185,190,198,0.5)] focus-within:border-gold";
 
 export function Card({
   as = "div",
