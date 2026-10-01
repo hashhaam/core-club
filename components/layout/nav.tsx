@@ -93,7 +93,7 @@ export function Nav() {
                 <Link
                   href={link.href}
                   aria-current={pathname === link.href ? "page" : undefined}
-                  className="t-button text-titanium transition-colors duration-[var(--cc-dur-fast)] hover:text-core-white"
+                  className="t-button relative inline-block text-titanium transition-colors duration-[var(--cc-dur-fast)] hover:text-core-white focus-visible:text-core-white after:absolute after:inset-x-0 after:-bottom-1 after:h-[2px] after:bg-red-lift after:opacity-0 after:content-[''] after:transition-opacity after:duration-[var(--cc-dur-fast)] hover:after:opacity-100 focus-visible:after:opacity-100 motion-reduce:after:transition-none"
                 >
                   {link.label}
                 </Link>
@@ -162,7 +162,7 @@ export function Nav() {
                   <Link
                     href={link.href}
                     aria-current={pathname === link.href ? "page" : undefined}
-                    className="t-h3 text-titanium transition-colors duration-[var(--cc-dur-fast)] hover:text-core-white"
+                    className="t-h3 relative inline-block text-titanium transition-colors duration-[var(--cc-dur-fast)] hover:text-core-white focus-visible:text-core-white after:absolute after:inset-x-0 after:-bottom-1 after:h-[2px] after:bg-red-lift after:opacity-0 after:content-[''] after:transition-opacity after:duration-[var(--cc-dur-fast)] hover:after:opacity-100 focus-visible:after:opacity-100 motion-reduce:after:transition-none"
                   >
                     {link.label}
                   </Link>

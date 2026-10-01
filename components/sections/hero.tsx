@@ -23,20 +23,12 @@ export function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(200,162,74,0.06), transparent 70%)",
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
             "linear-gradient(to bottom, transparent 60%, #0B0B0D 100%)",
         }}
       />
 
       <div className="container-cc relative z-[var(--z-content)]">
-        <div className="fade-up mb-7">
+        <div className="fade-up mb-5">
           <p className="t-eyebrow text-titanium">CORE CLUB / D GROUND, FAISALABAD</p>
         </div>
 
@@ -45,11 +37,12 @@ export function Hero() {
           <span className="t-hero headline-solid block">CORE</span>
         </h1>
 
-        <p className="t-body fade-up fade-up-delay-120 mt-8 max-w-[52ch] text-titanium">
-          {site.positioning}
-        </p>
+        <div className="fade-up fade-up-delay-120 mt-6 max-w-[46ch]">
+          <div aria-hidden="true" className="h-[3px] w-12 bg-core-red" />
+          <p className="t-body mt-4 text-titanium">{site.positioning}</p>
+        </div>
 
-        <div className="fade-up fade-up-delay-240 mt-8">
+        <div className="fade-up fade-up-delay-240 mt-7">
           <div className="flex flex-wrap gap-4">
             <Button variant="primary" href="/pre-register">
               {site.preLaunch.heroPrimaryLabel}
