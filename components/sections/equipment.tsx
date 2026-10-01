@@ -165,7 +165,7 @@ export function Equipment() {
     <section
       ref={sectionRef}
       id="equipment"
-      className="section-cc relative overflow-hidden bg-core-black"
+      className="section-cc relative overflow-hidden border-t border-hairline-strong bg-core-black"
     >
       <div
         aria-hidden="true"
@@ -184,13 +184,16 @@ export function Equipment() {
         }}
       />
       <div className="container-cc relative z-10 grid items-center gap-12 lg:grid-cols-2">
-        <Reveal>
-          <p className="t-eyebrow text-gold-lift">EQUIPMENT</p>
-          <h2 className="t-h2 mt-6 text-core-white">Built for serious training.</h2>
-          <p className="t-body mt-4 max-w-[46ch] text-titanium">
-            Panatta equipment sits alongside dedicated free-weight and machine
-            zones across the strength floor.
-          </p>
+        <Reveal className="max-w-[520px]">
+          <p className="t-eyebrow text-titanium">EQUIPMENT</p>
+          <div className="relative mt-6 pl-5 sm:pl-6">
+            <span aria-hidden="true" className="absolute left-0 top-1 h-12 w-[3px] bg-core-red" />
+            <h2 className="t-h2 max-w-[16ch] text-core-white">Built for serious training.</h2>
+            <p className="t-body mt-4 max-w-[42ch] text-titanium">
+              Panatta equipment sits alongside dedicated free-weight and machine
+              zones across the strength floor.
+            </p>
+          </div>
         </Reveal>
         <div className="@container order-first w-full lg:order-none">
           <div className="relative mx-auto aspect-square min-h-[min(480px,100cqw)] w-full max-w-[480px]">

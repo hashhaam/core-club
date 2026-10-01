@@ -12,22 +12,22 @@ export function Coaching() {
     <section
       id="coaching"
       aria-labelledby="coaching-heading"
-      className="section-cc scroll-mt-16 border-t border-hairline bg-core-black lg:scroll-mt-[76px]"
+      className="section-cc scroll-mt-16 border-t border-hairline-strong bg-core-black lg:scroll-mt-[76px]"
     >
       <div className="container-cc">
         <Reveal>
-          <p className="t-eyebrow text-gold-lift">COACHING</p>
-          <h2 id="coaching-heading" className="t-h2 headline-solid mt-6">
+          <p className="t-eyebrow text-red-lift">COACHING</p>
+          <h2 id="coaching-heading" className="t-h2 headline-solid mt-5 max-w-[18ch]">
             Coaching with purpose.
           </h2>
-          <p className="t-body mt-6 max-w-[62ch] text-titanium">
+          <p className="t-body mt-5 max-w-[52ch] text-titanium">
             Work with Core Club&apos;s coaching staff when you want more structure,
             consistency and direction in your training.
           </p>
           <Button
             variant="secondary"
             href="/#the-club"
-            className="mt-8 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            className="mt-7 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
           >
             ASK ABOUT COACHING
           </Button>
@@ -83,8 +83,8 @@ export function Coaching() {
           </div>
         )}
 
-        <Reveal className="mt-12 rounded-cc-md border border-hairline bg-surface-1 p-6 sm:mt-16 sm:p-8 lg:flex lg:items-end lg:justify-between lg:gap-12">
-          <div className="max-w-[62ch]">
+        <Reveal className="mt-10 rounded-[16px] border border-hairline-strong bg-surface-1 p-6 sm:mt-12 sm:p-8 lg:flex lg:items-center lg:justify-between lg:gap-12">
+          <div className="max-w-[56ch]">
             <h3 className="t-h3 text-core-white">In-house Physiotherapy</h3>
             <p className="t-body mt-4 text-titanium">
               Need advice around an injury or training-related concern? In-house
