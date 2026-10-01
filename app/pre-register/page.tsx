@@ -5,6 +5,7 @@ import { PreRegistrationForm } from "@/components/pre-register/pre-registration-
 import { memberships } from "@/content/memberships";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pre-register" },
   title: "Founding Member Pre-Booking",
   description:
     "Pre-register for a Core Club founding membership in Faisalabad. Review your plan and send payment confirmation for manual verification.",
@@ -32,8 +33,7 @@ export default function PreRegisterPage() {
               payment for manual verification.
             </p>
             <p className="t-small mt-5 text-muted">
-              Pre-booking opens {memberships.preBookingOpens}. Founding rates
-              are available to the first {memberships.foundingMemberLimit} members.
+              Pre-booking is now open for the first {memberships.foundingMemberLimit} members.
             </p>
           </header>
 

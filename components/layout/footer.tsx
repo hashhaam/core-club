@@ -33,11 +33,7 @@ export function Footer() {
           <div>
             <h2 className="t-eyebrow text-titanium">NAVIGATE</h2>
             <ul className="mt-5 space-y-3">
-              {[
-                ...site.nav,
-                { label: "About", href: "/about" },
-                { label: "Gallery", href: "/gallery" },
-              ].map((link) => (
+              {site.nav.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -118,17 +114,10 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-hairline-strong pt-8 lg:flex-row">
+        <div className="mt-12 border-t border-hairline-strong pt-8 text-center lg:text-left">
           <p className="t-caption text-muted">
             © {new Date().getFullYear()} Core Club. All rights reserved.
           </p>
-          <div className="t-caption flex items-center gap-3 text-muted">
-            <Link href="#">Privacy Policy</Link>
-            <span aria-hidden="true" className="text-hairline">
-              ·
-            </span>
-            <Link href="#">Terms</Link>
-          </div>
         </div>
       </div>
     </footer>

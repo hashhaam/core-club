@@ -57,8 +57,8 @@ export function Membership() {
                   </dd>
                 </div>
                 <div className="mt-auto border-t border-hairline-strong pt-5">
-                  <dt className="t-eyebrow text-muted">SAVE</dt>
-                  <dd className="t-body t-tabular mt-2 text-titanium">
+                  <dt className="t-eyebrow text-red-lift">SAVE</dt>
+                  <dd className="t-body t-tabular mt-2 text-red-lift">
                     {formatPrice(plan.regularPrice - plan.foundingPrice)}
                   </dd>
                 </div>
@@ -86,7 +86,7 @@ export function Membership() {
 
         <div className="mt-10 flex flex-col gap-5 border-t border-hairline-strong pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="t-small text-titanium">
-            Pre-booking opens {memberships.preBookingOpens}.
+            Pre-booking is now open for the first {memberships.foundingMemberLimit} members.
           </p>
           <Button variant="primary" href="/pre-register">
             PRE-REGISTER

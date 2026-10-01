@@ -6,6 +6,7 @@ import { location } from "@/content/location";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: { absolute: "Contact Core Club | D Ground, Faisalabad" },
   description:
     "Contact Core Club in D Ground, Faisalabad for memberships, coaching, facilities, women's hours and physiotherapy enquiries.",
