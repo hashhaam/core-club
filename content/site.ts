@@ -24,10 +24,10 @@ export const site: SiteConfig = {
     "A performance-focused gym in D Ground, Faisalabad, built around strength, conditioning and recovery.",
   url: "https://coreclub.pk",
   nav: [
-    { label: "Facilities", href: "/facilities" },
+    { label: "Facilities", href: "/#facilities" },
     { label: "Memberships", href: "/#membership" },
     { label: "Coaching", href: "/#coaching" },
-    { label: "Women's Hours", href: "/womens-hours" },
+    { label: "Women's Hours", href: "/#womens-hours" },
     { label: "Contact", href: "/contact" },
   ],
   social: [

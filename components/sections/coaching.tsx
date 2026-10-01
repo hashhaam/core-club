@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { coaches } from "@/content/coaches";
 
@@ -14,21 +15,23 @@ export function Coaching() {
       className="section-cc scroll-mt-16 border-t border-hairline bg-core-black lg:scroll-mt-[76px]"
     >
       <div className="container-cc">
-        <p className="t-eyebrow text-muted">04 / COACHING</p>
-        <h2 id="coaching-heading" className="t-h2 headline-solid mt-6">
-          Coaching with purpose.
-        </h2>
-        <p className="t-body mt-6 max-w-[62ch] text-titanium">
-          Work with Core Club&apos;s coaching staff when you want more structure,
-          consistency and direction in your training.
-        </p>
-        <Button
-          variant="secondary"
-          href="/#the-club"
-          className="mt-8 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-        >
-          ASK ABOUT COACHING
-        </Button>
+        <Reveal>
+          <p className="t-eyebrow text-gold-lift">COACHING</p>
+          <h2 id="coaching-heading" className="t-h2 headline-solid mt-6">
+            Coaching with purpose.
+          </h2>
+          <p className="t-body mt-6 max-w-[62ch] text-titanium">
+            Work with Core Club&apos;s coaching staff when you want more structure,
+            consistency and direction in your training.
+          </p>
+          <Button
+            variant="secondary"
+            href="/#the-club"
+            className="mt-8 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+          >
+            ASK ABOUT COACHING
+          </Button>
+        </Reveal>
 
         {hasVerifiedProfiles && (
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -80,7 +83,7 @@ export function Coaching() {
           </div>
         )}
 
-        <div className="mt-12 rounded-cc-md border border-hairline bg-surface-1 p-6 sm:mt-16 sm:p-8 lg:flex lg:items-end lg:justify-between lg:gap-12">
+        <Reveal className="mt-12 rounded-cc-md border border-hairline bg-surface-1 p-6 sm:mt-16 sm:p-8 lg:flex lg:items-end lg:justify-between lg:gap-12">
           <div className="max-w-[62ch]">
             <h3 className="t-h3 text-core-white">In-house Physiotherapy</h3>
             <p className="t-body mt-4 text-titanium">
@@ -96,7 +99,7 @@ export function Coaching() {
           >
             ASK ABOUT PHYSIOTHERAPY
           </Button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

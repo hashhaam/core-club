@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { Reveal } from "@/components/motion/reveal";
+
 const FRAME_COUNT = 32;
 const STATIC_FRAME = 15;
 const STATIC_SOURCE = "/dumbbell/frames/dumbbell-016.webp";
@@ -182,14 +184,14 @@ export function Equipment() {
         }}
       />
       <div className="container-cc relative z-10 grid items-center gap-12 lg:grid-cols-2">
-        <div>
-          <p className="t-eyebrow text-muted">03 / EQUIPMENT</p>
+        <Reveal>
+          <p className="t-eyebrow text-gold-lift">EQUIPMENT</p>
           <h2 className="t-h2 mt-6 text-core-white">Built for serious training.</h2>
           <p className="t-body mt-4 max-w-[46ch] text-titanium">
             Panatta equipment sits alongside dedicated free-weight and machine
             zones across the strength floor.
           </p>
-        </div>
+        </Reveal>
         <div className="@container order-first w-full lg:order-none">
           <div className="relative mx-auto aspect-square min-h-[min(480px,100cqw)] w-full max-w-[480px]">
             <canvas
