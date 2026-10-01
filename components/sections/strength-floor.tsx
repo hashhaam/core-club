@@ -11,7 +11,7 @@ export function StrengthFloor() {
     <section id="strength-floor" className="section-cc bg-core-black">
       <div className="container-cc">
         <Reveal>
-          <p className="t-eyebrow text-gold-lift">STRENGTH FLOOR</p>
+          <p className="t-eyebrow text-red-lift">STRENGTH FLOOR</p>
         </Reveal>
 
         <div
@@ -26,7 +26,7 @@ export function StrengthFloor() {
               key={zone.slug}
               tabIndex={0}
               delay={(index % 3) * 0.06}
-              className="relative aspect-[16/11] w-full overflow-hidden rounded-cc-md bg-surface-2 lg:h-[560px] lg:w-[420px] lg:flex-none lg:snap-start lg:aspect-auto"
+              className="relative aspect-[16/11] w-full overflow-hidden rounded-[16px] border border-hairline-strong bg-surface-2 lg:h-[560px] lg:w-[420px] lg:flex-none lg:snap-start lg:aspect-auto"
             >
               {/* TODO: replace each temporary generated concept image with real zone photography before launch. */}
               {zone.image ? (
@@ -52,11 +52,11 @@ export function StrengthFloor() {
                 className="pointer-events-none absolute inset-0"
                 style={{
                   backgroundImage:
-                    "linear-gradient(to top, #1A1C21 10%, transparent 60%)",
+                    "linear-gradient(to top, #0B0B0D 8%, transparent 62%)",
                 }}
               />
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <h3 className="t-h3 text-core-white">{zone.name}</h3>
+                <h3 className="t-h3 zone-title text-core-white">{zone.name}</h3>
                 <p className="t-small mt-2 text-titanium">
                   {zone.description}
                 </p>
