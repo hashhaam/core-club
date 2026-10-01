@@ -152,9 +152,9 @@ export function PreRegistrationForm() {
 
   if (step === "payment" && selectedPlan) {
     return (
-      <section className="mt-10" aria-labelledby="payment-heading">
-        <div className="rounded-cc-lg border border-hairline bg-surface-1 p-6 sm:p-8 lg:p-10">
-          <p className="t-eyebrow text-muted">02 / PAYMENT</p>
+      <section className="mt-8" aria-labelledby="payment-heading">
+        <div className="rounded-[16px] border border-hairline-strong bg-surface-1 p-6 sm:p-8 lg:p-10">
+          <p className="t-eyebrow text-gold-lift">02 / PAYMENT</p>
           <h2
             ref={paymentHeadingRef}
             id="payment-heading"
@@ -163,12 +163,25 @@ export function PreRegistrationForm() {
           >
             Complete Your Pre-Booking
           </h2>
-          <p className="t-body mt-4 text-titanium">
+          <p className="t-body mt-4 max-w-[52ch] text-titanium">
             Review your details, make the payment, then send your confirmation
             on WhatsApp.
           </p>
 
-          <div className="mt-8 rounded-cc-md border border-hairline bg-surface-2 p-5 sm:p-6">
+          <dl className="mt-8 grid gap-5 border-y border-hairline-strong py-6 sm:grid-cols-2 sm:gap-8">
+            <div className="min-w-0">
+              <dt className="t-small text-titanium">Selected membership</dt>
+              <dd className="t-h3 mt-2 text-core-white">{planLabel}</dd>
+            </div>
+            <div className="min-w-0">
+              <dt className="t-small text-gold-lift">Amount to pay</dt>
+              <dd className="t-stat mt-2 break-words text-[clamp(2rem,4vw,3rem)]! text-core-white">
+                {formatPrice(selectedPlan.foundingPrice)}
+              </dd>
+            </div>
+          </dl>
+
+          <div className="mt-8">
             <h3 className="t-eyebrow text-muted">YOUR DETAILS</h3>
             <dl className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-2">
               <div className="min-w-0">
@@ -183,22 +196,12 @@ export function PreRegistrationForm() {
                 <dt className="t-small text-muted">Email</dt>
                 <dd className="t-body break-all text-core-white">{details.email}</dd>
               </div>
-              <div className="min-w-0">
-                <dt className="t-small text-muted">Selected membership</dt>
-                <dd className="t-body text-core-white">{planLabel}</dd>
-              </div>
             </dl>
-            <div className="mt-6 flex flex-wrap items-baseline justify-between gap-3 border-t border-hairline pt-5">
-              <p className="t-small text-titanium">Amount to pay</p>
-              <p className="t-h3 t-tabular text-core-white">
-                {formatPrice(selectedPlan.foundingPrice)}
-              </p>
-            </div>
           </div>
 
-          <div className="mt-6 rounded-cc-md border border-hairline bg-surface-2 p-5 sm:p-6">
+          <div className="mt-8 border-t border-hairline-strong pt-8">
             <h3 className="t-eyebrow text-muted">PAYMENT DETAILS</h3>
-            <dl className="mt-5 divide-y divide-hairline">
+            <dl className="mt-5 divide-y divide-hairline-strong">
               <div className="py-4 first:pt-0">
                 <dt className="t-small text-muted">Account Name</dt>
                 <dd className="t-body mt-1 text-core-white">
@@ -249,7 +252,7 @@ export function PreRegistrationForm() {
             </p>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-baseline justify-between gap-3 rounded-cc-md border border-hairline bg-surface-2 p-5 sm:p-6">
+          <div className="mt-8 flex flex-wrap items-baseline justify-between gap-3 rounded-cc-sm border border-hairline-strong bg-surface-2 p-5 sm:p-6">
             <div>
               <p className="t-eyebrow text-muted">REGISTRATION FEE</p>
               <p className="t-small t-tabular mt-2 text-titanium">
@@ -301,13 +304,13 @@ export function PreRegistrationForm() {
   }
 
   return (
-    <section className="mt-10" aria-labelledby="details-heading">
+    <section className="mt-8" aria-labelledby="details-heading">
       <form
         noValidate
         onSubmit={continueToPayment}
-        className="rounded-cc-lg border border-hairline bg-surface-1 p-6 sm:p-8 lg:p-10"
+        className="rounded-[16px] border border-hairline-strong bg-surface-1 p-6 sm:p-8 lg:p-10"
       >
-        <p className="t-eyebrow text-muted">01 / YOUR DETAILS</p>
+        <p className="t-eyebrow text-gold-lift">01 / YOUR DETAILS</p>
         <h2
           ref={detailsHeadingRef}
           id="details-heading"
@@ -396,7 +399,7 @@ export function PreRegistrationForm() {
         </div>
 
         <fieldset
-          className="mt-8"
+          className="mt-8 border-t border-hairline-strong pt-6"
           aria-invalid={Boolean(errors.planSlug)}
           aria-describedby={errors.planSlug ? "plan-error" : undefined}
         >
@@ -409,7 +412,7 @@ export function PreRegistrationForm() {
               return (
                 <label
                   key={plan.slug}
-                  className={`flex min-w-0 cursor-pointer items-center gap-4 rounded-cc-sm border p-4 transition-colors ${selected ? "border-gold bg-surface-2" : "border-hairline-strong bg-surface-2 hover:border-titanium"}`}
+                  className={`flex min-w-0 cursor-pointer items-center gap-4 rounded-cc-sm border p-4 transition-colors focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-gold ${selected ? "border-gold border-l-[4px] bg-core-black" : "border-hairline-strong bg-surface-2 hover:border-titanium"}`}
                 >
                   <input
                     ref={index === 0 ? planRef : undefined}
@@ -438,7 +441,7 @@ export function PreRegistrationForm() {
           )}
         </fieldset>
 
-        <div className="mt-8 border-t border-hairline pt-8">
+        <div className="mt-8 border-t border-hairline-strong pt-8">
           <Button type="submit" variant="primary">
             CONTINUE TO PAYMENT
           </Button>

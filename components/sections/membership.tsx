@@ -15,7 +15,7 @@ export function Membership() {
     <section
       id="membership"
       aria-labelledby="membership-heading"
-      className="section-cc scroll-mt-16 border-t border-hairline bg-core-black lg:scroll-mt-[76px]"
+      className="section-cc scroll-mt-16 border-t border-hairline-strong bg-core-black lg:scroll-mt-[76px]"
     >
       <div className="container-cc">
         <Reveal>
@@ -38,25 +38,25 @@ export function Membership() {
               as="li"
               key={plan.slug}
               delay={index * 0.06}
-              className="flex min-w-0 flex-col rounded-cc-md border border-hairline bg-surface-1 p-6"
+              className="flex min-w-0 flex-col rounded-cc-sm border border-hairline-strong bg-surface-1 p-6"
             >
               <h3 className="t-h3 text-core-white">
                 {plan.durationMonths} {plan.durationMonths === 1 ? "MONTH" : "MONTHS"}
               </h3>
-              <dl className="mt-8 flex flex-1 flex-col">
-                <div className="border-t border-hairline pt-5">
+              <dl className="mt-7 flex flex-1 flex-col">
+                <div className="border-t border-hairline-strong pt-5">
                   <dt className="t-eyebrow text-muted">REGULAR</dt>
                   <dd className="t-body t-tabular mt-2 text-titanium">
                     {formatPrice(plan.regularPrice)}
                   </dd>
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 pb-6">
                   <dt className="t-eyebrow text-gold-lift">FOUNDING RATE</dt>
-                  <dd className="t-tabular mt-3 whitespace-nowrap text-[clamp(2rem,2.75vw,2.5rem)] font-semibold leading-none tracking-tight text-core-white">
+                  <dd className="t-stat mt-3 whitespace-nowrap text-[clamp(2rem,2.45vw,2.375rem)]! text-core-white">
                     {formatPrice(plan.foundingPrice)}
                   </dd>
                 </div>
-                <div className="mt-auto pt-8">
+                <div className="mt-auto border-t border-hairline-strong pt-5">
                   <dt className="t-eyebrow text-muted">SAVE</dt>
                   <dd className="t-body t-tabular mt-2 text-titanium">
                     {formatPrice(plan.regularPrice - plan.foundingPrice)}
@@ -67,15 +67,15 @@ export function Membership() {
           ))}
         </ol>
 
-        <Reveal className="mt-5 flex flex-col gap-4 rounded-cc-md border border-hairline bg-surface-1 p-6 sm:flex-row sm:items-end sm:justify-between lg:p-8">
+        <Reveal className="mt-5 grid gap-5 rounded-cc-sm border border-hairline-strong bg-surface-1 p-6 sm:grid-cols-2 sm:items-center lg:p-8">
           <div>
             <p className="t-eyebrow text-muted">REGISTRATION FEE</p>
             <p className="t-small t-tabular mt-3 text-titanium">
               Regular: {formatPrice(memberships.registrationFee.regular)}
             </p>
           </div>
-          <p className="t-body text-core-white">
-            <span className="font-semibold text-gold-lift">
+          <p className="t-body text-core-white sm:border-l sm:border-hairline-strong sm:pl-8">
+            <span className="t-h3 inline-block text-gold-lift">
               {memberships.registrationFee.founding === 0
                 ? "FREE"
                 : formatPrice(memberships.registrationFee.founding)}
@@ -84,7 +84,7 @@ export function Membership() {
           </p>
         </Reveal>
 
-        <div className="mt-10 flex flex-col gap-5 border-t border-hairline pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-5 border-t border-hairline-strong pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="t-small text-titanium">
             Pre-booking opens {memberships.preBookingOpens}.
           </p>

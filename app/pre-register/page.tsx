@@ -22,12 +22,12 @@ export default function PreRegisterPage() {
             ← BACK TO MEMBERSHIPS
           </Link>
 
-          <header className="mt-10 border-b border-hairline pb-10 sm:mt-14">
+          <header className="mt-10 border-b border-hairline-strong pb-9 sm:mt-14">
             <p className="t-eyebrow text-gold-lift">
               FOUNDING MEMBERS / PRE-BOOKING
             </p>
             <h1 className="t-h2 headline-solid mt-6">Join The Core</h1>
-            <p className="t-body mt-5 max-w-[58ch] text-titanium">
+            <p className="t-body mt-5 max-w-[52ch] text-titanium">
               Choose your membership, enter your details and complete your
               payment for manual verification.
             </p>
