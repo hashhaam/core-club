@@ -1,0 +1,19 @@
+# robots.txt for Core Club - https://coreclub.pk
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of Next.js build artifacts and internal directories
+Disallow: /_next/static/
+Disallow: /api/
+
+# Disallow common bot patterns that may harm site performance
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Sitemap location (update when sitemap is generated)
+Sitemap: https://coreclub.pk/sitemap.xml
